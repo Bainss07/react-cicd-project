@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        AWS_REGION = 'us-east-1'
+        AWS_REGION = 'us-east-2'
         ECR_REGISTRY = '910837096291.dkr.ecr.us-east-2.amazonaws.com'
         ECR_REPOSITORY = 'react-app-repo'
         IMAGE_TAG = "${env.BUILD_ID}"
