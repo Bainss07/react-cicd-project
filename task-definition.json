@@ -1,20 +1,22 @@
 {
     "family": "react-app-task",
     "networkMode": "awsvpc",
+    "executionRoleArn": "arn:aws:iam::910837096291:role/ecsTaskExecutionRole",
     "containerDefinitions": [
-        {
-            "name": "react-app-container",
-            "image": "910837096291.dkr.ecr.us-east-2.amazonaws.com/react-app-repo:latest",
-            "essential": true,
-            "portMappings": [
-                {
-                    "containerPort": 80,
-                    "hostPort": 80
-                }
-            ]
-        }
+      {
+        "name": "react-app-container",
+        "image": "910837096291.dkr.ecr.us-east-2.amazonaws.com/react-app-repo:latest",
+        "essential": true,
+        "portMappings": [
+          {
+            "containerPort": 80,
+            "hostPort": 80
+          }
+        ]
+      }
     ],
     "requiresCompatibilities": ["FARGATE"],
     "cpu": "256",
     "memory": "512"
-}
+  }
+  
